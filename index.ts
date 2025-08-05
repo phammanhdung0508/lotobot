@@ -1,6 +1,7 @@
 import dotenv from "dotenv"
 import { MezonClient } from "mezon-sdk"
 import { createRoom } from "./src/commands/createRoom.js"
+import { joinRoom } from "./src/commands/joinRoom.js"
 dotenv.config()
 
 async function main() {
@@ -16,7 +17,7 @@ async function main() {
         const message = await channel.messages.fetch(String(event.message_id));
 
         if (text.startsWith("*loto")) return createRoom(channel, message)
-        //if (text.startsWith("*join")) return joinRoom(channel, message, event)
+        if (text.startsWith("*join")) return joinRoom(channel, message, event)
     })
 }
 
