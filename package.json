@@ -1,5 +1,5 @@
 {
-  "name": "doraeeemon",
+  "name": "lotobot",
   "private": true,
   "packageManager": "pnpm@9.3.0",
   "devDependencies": {
@@ -16,7 +16,7 @@
     "lint": "turbo run lint",
     "fmt": "turbo run fmt",
     "test": "turbo run test",
-    "postinstall": "turbo build --filter='./packages/*' --filter=!@doraeeemon/mezon"
+    "postinstall": "turbo build --filter='./packages/*' --filter=!@lotobot/mezon"
   },
   "pnpm": {
     "overrides": {

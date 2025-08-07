@@ -1,5 +1,5 @@
 {
-  "name": "@doraeeemon/utils",
+  "name": "@lotobot/utils",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {

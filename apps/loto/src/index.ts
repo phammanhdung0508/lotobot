@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { MezonClient } from "@doraeeemon/mezon";
+import { MezonClient } from "@lotobot/mezon";
 
 dotenv.config()
 

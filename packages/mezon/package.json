@@ -1,5 +1,5 @@
 {
-  "name": "@doraeeemon/mezon",
+  "name": "@lotobot/mezon",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {

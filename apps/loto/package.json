@@ -1,5 +1,5 @@
 {
-  "name": "@doraeeemon/dora",
+  "name": "@lotobot/dora",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
@@ -18,8 +18,8 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@doraeeemon/mezon": "workspace:^",
-    "@doraeeemon/utils": "workspace:^",
+    "@lotobot/mezon": "workspace:^",
+    "@lotobot/utils": "workspace:^",
     "dotenv": "^17.2.1"
   }
 }

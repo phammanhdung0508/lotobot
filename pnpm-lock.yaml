@@ -32,12 +32,12 @@ importers:
         specifier: ^2.4.2
         version: 2.5.5
 
-  apps/dora:
+  apps/loto:
     dependencies:
-      '@doraeeemon/mezon':
+      '@lotobot/mezon':
         specifier: workspace:^
         version: link:../../packages/mezon
-      '@doraeeemon/utils':
+      '@lotobot/utils':
         specifier: workspace:^
         version: link:../../packages/utils
       dotenv:
