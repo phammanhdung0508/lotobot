@@ -1,0 +1,22 @@
+{
+  "name": "@doraeeemon/utils",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build-ts",
+    "build-ts": "tsc",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "ts-node": "^10",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@lazidog/utils": "^1.0.1"
+  },
+  "files": [
+    "/dist"
+  ]
+}

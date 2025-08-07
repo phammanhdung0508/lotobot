@@ -1,0 +1,21 @@
+{
+  "name": "@doraeeemon/mezon",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build-ts": "tsc",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "mezon-sdk": "2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "ts-node": "^10",
+    "typescript": "^5"
+  },
+  "files": [
+    "/dist"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@doraeeemon/dora",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build-ts",
+    "build-ts": "tsc",
+    "build": "tsc",
+    "lint": "biome lint src --no-errors-on-unmatched",
+    "fmt": "biome format src --write --no-errors-on-unmatched",
+    "check": "biome check --write --no-errors-on-unmatched",
+    "dev": "ts-node --files --transpile-only src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "ts-node": "^10.9.1",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@doraeeemon/mezon": "workspace:^",
+    "@doraeeemon/utils": "workspace:^",
+    "dotenv": "^17.2.1"
+  }
+}
