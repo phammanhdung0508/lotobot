@@ -15,10 +15,13 @@ const roomStatus = {
     CANCELLED: "cancelled"
 }
 
-function loadData() {
+function loadData(id: string) {
     if (!fs.existsSync(filePath)) return {};
-    const raw = fs.readFileSync(filePath);
-    return JSON.parse(raw.toString());
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    if(id){
+        return data
+    }
+    return data.find((obj: { id: string }) => obj.id === id)
 }
 
 function saveData(data: any) {
@@ -28,13 +31,19 @@ function saveData(data: any) {
 export function writeRoom(): { updated: boolean, roomId: string }
 export function writeRoom(id: string, player: any): { updated: boolean, roomId: string }
 
-export function writeRoom(id?: string, player?: any): { updated: boolean, roomId: string } {
-    const data = loadData();
+export function writeRoom(id?: string, player?: object | null): { updated: boolean, roomId: string } {
+    let data
     const today = new Date().toISOString().slice(0, 10); // yyyy-mm-dd
 
     if (!id) {
+        data = loadData();
         id = `room-${crypto.randomUUID()}`;
+    }else{
+        data = loadData(id.substring(0, 41))
     }
+
+    const cut = 
+    console.log(cut)
 
     const room = data[id] || {
             id: id,
@@ -51,10 +60,10 @@ export function writeRoom(id?: string, player?: any): { updated: boolean, roomId
         return { updated: false, roomId: room.id }
     }
 
-    if (!player) {
+    if (player) {
         room.player.push(player);
         room.playerCount++;
-        room.totalBet += 0//player.bet
+        room.totalBet += 0 //player.bet
     }
 
     data[id] = room;
